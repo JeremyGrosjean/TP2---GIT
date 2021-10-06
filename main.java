@@ -14,10 +14,10 @@ public class main {
 			action = "";
 
 
-	        hellos.put("Gryffondor", "-50");
-	        hellos.put("Poufsouffle", "15");
-	        hellos.put("Serdaigle", "60");
-	        hellos.put("Serpentard", "10");
+	        hellos.put("Gryffondor", -50);
+	        hellos.put("Poufsouffle", 15);
+	        hellos.put("Serdaigle", 60);
+	        hellos.put("Serpentard", 10);
 
 
 	        Iterator<String> iterator;
@@ -38,9 +38,10 @@ public class main {
 	                    hellos.put(id, text);
 
 	                } else if (action.equals("-")) {
-						System.out.printLn("suppression de la maison" + );
 	                    if (hellos.get(id) != null) {
 	                        hellos.remove(id);
+							System.out.printLn("suppression de la maison " + id );
+
 	                    } else {
 	                        System.out.println("La clé " + id + " n'existe pas.");
 	                    }
