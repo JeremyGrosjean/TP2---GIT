@@ -9,16 +9,15 @@ public class main {
 	        Scanner sc = new Scanner(System.in);
 	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
-	        String action, text, key;
-	        int id;
+
+	        String action, id, key;
+	        int text;
 			action = "";
 
-
-	        hellos.put("Gryffondor", -50);
+		hellos.put("Gryffondor", -50);
 	        hellos.put("Poufsouffle", 15);
 	        hellos.put("Serdaigle", 60);
 	        hellos.put("Serpentard", 10);
-
 
 	        Iterator<String> iterator;
 
@@ -30,17 +29,18 @@ public class main {
 	            if (action.equals("+") || action.equals("-")) {
 	                System.out.println("Saisir la maison :");
 
-	                id = sc.nextInt();
+	                id = sc.next();
 
 	                if (action.equals("+")) {
+
 	                    System.out.println("Saisir les points :");
-	                    text = sc.next();
-	                    hellos.put(id, text);
+	                    text = sc.nextInt();
+	                    hellos.put(id,text);
 
 	                } else if (action.equals("-")) {
+						System.out.println("suppression de la maison " + id );
 	                    if (hellos.get(id) != null) {
 	                        hellos.remove(id);
-							System.out.printLn("suppression de la maison " + id );
 
 	                    } else {
 	                        System.out.println("La clé " + id + " n'existe pas.");
