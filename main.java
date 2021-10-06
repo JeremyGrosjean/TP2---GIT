@@ -28,16 +28,17 @@ public class main {
 	            action = sc.next();
 
 	            if (action.equals("+") || action.equals("-")) {
-	                System.out.println("Saisir l'identifiant :");
+	                System.out.println("Saisir la maison :");
 
 	                id = sc.nextInt();
 
 	                if (action.equals("+")) {
-	                    System.out.println("Saisir le texte :");
+	                    System.out.println("Saisir les points :");
 	                    text = sc.next();
 	                    hellos.put(id, text);
 
 	                } else if (action.equals("-")) {
+						System.out.printLn("suppression de la maison" + );
 	                    if (hellos.get(id) != null) {
 	                        hellos.remove(id);
 	                    } else {
