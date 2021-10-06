@@ -1,4 +1,4 @@
-package hogwarts;
+  package hogwarts;
 
 import java.util.HashMap;
 import java.util.Iterator;
