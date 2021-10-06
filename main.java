@@ -7,16 +7,17 @@ import java.util.Scanner;
 public class main {
 	    public static void main(String[] args) {
 	        Scanner sc = new Scanner(System.in);
-	        HashMap <String, String> hellos = new HashMap<String, String>();
+	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
-	        String action, id, text, key;
+	        String action, id, key;
+			int text;
 	        action = "";
 
 
-	        hellos.put("Gryffondor", "0");
-	        hellos.put("Poufsouffle", "0");
-	        hellos.put("Serdaigle", "0");
-	        hellos.put("Serpentard", "0");
+	        hellos.put("Gryffondor", 0);
+	        hellos.put("Poufsouffle", 0);
+	        hellos.put("Serdaigle", 0);
+	        hellos.put("Serpentard", 0);
 
 
 	        Iterator<String> iterator;
@@ -33,8 +34,8 @@ public class main {
 
 	                if (action.equals("+")) {
 	                    System.out.println("Saisir le texte :");
-	                    text = sc.next();
-	                    hellos.put(id, text);
+	                    text = sc.nextInt();
+	                    hellos.put(id,text);
 
 	                } else if (action.equals("-")) {
 	                    if (hellos.get(id) != null) {
