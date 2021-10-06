@@ -13,10 +13,11 @@ public class main {
 	        action = "";
 
 
-	        hellos.put("Gryffondor", "-50");
-	        hellos.put("Poufsouffle", "15");
-	        hellos.put("Serdaigle", "60");
-	        hellos.put("Serpentard", "10");
+		hellos.put("Gryffondor", -50);
+	        hellos.put("Poufsouffle", 15);
+	        hellos.put("Serdaigle", 60);
+	        hellos.put("Serpentard", 10);
+
 
 
 	        Iterator<String> iterator;
