@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class main {
 	    public static void main(String[] args) {
 	        Scanner sc = new Scanner(System.in);
-	        HashMap <String, String> hellos = new HashMap<String, String>();
+	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
-	        String action, id, text, key;
-	        action = "";
+	        String action, text, key;
+	        int id;
+			action = "";
 
 
 	        hellos.put("Gryffondor", "0");
@@ -29,7 +30,7 @@ public class main {
 	            if (action.equals("+") || action.equals("-")) {
 	                System.out.println("Saisir l'identifiant :");
 
-	                id = sc.next();
+	                id = sc.nextInt();
 
 	                if (action.equals("+")) {
 	                    System.out.println("Saisir le texte :");
