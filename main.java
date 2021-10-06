@@ -11,40 +11,40 @@ public class main {
 
 
 	        String action, id, key;
-	        int text;
-			action = "";
+			Integer text;
+	        action = "";
+			id="";
 
-		hellos.put("Gryffondor", -50);
+			hellos.put("Gryffondor", -50);
 	        hellos.put("Poufsouffle", 15);
 	        hellos.put("Serdaigle", 60);
 	        hellos.put("Serpentard", 10);
-
+			
 	        Iterator<String> iterator;
 
 	        while (!action.equals("QUIT")) {
 
-	            System.out.println("\nBienvenue à Poudlard ! \n - Tapez '+' pour ajouter un élément au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \n - Tapez 'SIZE' pour connaître la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme.");
+	            System.out.println("\nBienvenue à Poudlard ! \n - Tapez '+' pour ajouter un élément au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \n - Tapez 'SIZE' pour connaître la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme. \n Tapez 'DEL' pour supprimer une maison");
 	            action = sc.next();
 
 	            if (action.equals("+") || action.equals("-")) {
-	                System.out.println("Saisir la maison :");
+	                System.out.println("Saisir la Maison");
 
 	                id = sc.next();
 
-	                if (action.equals("+")) {
-
-	                    System.out.println("Saisir les points :");
+	                if (action.equals("+")) { 
+	                    System.out.println("Ajouter les points :");
 	                    text = sc.nextInt();
-	                    hellos.put(id,text);
+						Integer calc = hellos.get(id);
+						calc = calc + text;
+						hellos.put(id,calc);                    
 
 	                } else if (action.equals("-")) {
-						System.out.println("suppression de la maison " + id );
-	                    if (hellos.get(id) != null) {
-	                        hellos.remove(id);
-
-	                    } else {
-	                        System.out.println("La clé " + id + " n'existe pas.");
-	                    }
+	                    System.out.println("Retirer des points :");
+	                    text = sc.nextInt();
+						Integer calc = hellos.get(id);
+						calc = calc - text;
+						hellos.put(id,calc);						
 
 	                } 
 	            } else if (action.equals("GET")) {
@@ -57,6 +57,17 @@ public class main {
 	            } else if (action.equals("SIZE")) {
 	                System.out.println("Taille : " + hellos.size());
 	            }
+
+				else if (action.equals("DEL")) {
+					System.out.println("Saisir la Maison");
+	                id = sc.next();
+
+					if (hellos.get(id) != null) {
+						hellos.remove(id);
+					} else {
+						System.out.println("La clé " + id + " n'existe pas.");
+					}
+				}
 	        }
 
 	    }
