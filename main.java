@@ -12,7 +12,7 @@ public class main {
 	        String action, id, text, key;
 	        action = "";
 
-	        hellos.put("Grifindor", "0");
+	        hellos.put("Grifindor", "00");
 	        hellos.put("Hufflepuff", "0");
 	        hellos.put("Ravenclaw", "0");
 	        hellos.put("Slytherin", "0");
