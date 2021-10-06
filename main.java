@@ -10,7 +10,7 @@ public class main {
 	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
 	        String action, id, key;
-			int QUITtext;
+			int text;
 	        action = "";
 
 
