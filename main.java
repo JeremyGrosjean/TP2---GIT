@@ -16,8 +16,8 @@ public class main {
 			id="";
 
 			hellos.put("Gryffondor", -50);
-	        hellos.put("Poufsouffle", 15);
-	        hellos.put("Serdaigle", 60);
+	        hellos.put("Poufsouffle", 55515);
+	        hellos.put("Serdaigle", 601000);
 	        hellos.put("Serpentard", 10);
 			
 	        Iterator<String> iterator;
